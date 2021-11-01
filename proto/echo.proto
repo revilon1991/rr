@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option php_namespace = "Proto\\Echo";
+option php_metadata_namespace = "Proto\\GPBMetadata";
+
+package app;
+
+service Echo {
+  rpc Ping(app.Message) returns (app.Message) {}
+}
+
+message Message {string msg = 1;}

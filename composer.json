@@ -1,0 +1,26 @@
+{
+    "require": {
+        "spiral/roadrunner": "^2.5",
+        "nyholm/psr7": "^1.4",
+        "google/protobuf": "^3.19",
+        "spiral/roadrunner-grpc": "dev-master",
+        "grpc/grpc": "^1.39",
+        "ext-grpc": "*"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "./vendor/bin/rr get -l bin -n",
+            "chmod +x ./bin/rr"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "": "resources/",
+            "App\\": "src/"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.3",
+        "roave/security-advisories": "dev-latest"
+    }
+}
